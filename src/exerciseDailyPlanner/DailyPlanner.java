@@ -3,19 +3,17 @@ package exerciseDailyPlanner;
 import java.util.*;
 
 public class DailyPlanner {
-    private List<DaySchedule> planner;
+    private final List<DaySchedule> planner = new ArrayList<>();
 
     public DailyPlanner(List<DaySchedule> planner) {
-        this.planner = planner;
+        this.planner.addAll(planner);
     }
 
     public void addActivity(Day day, String activity) throws NoActivityException {
         if (activity == null) {
             throw new NoActivityException("No sent activity");
         }
-        if (planner == null) {
-            planner = new ArrayList<>();
-        }
+//
         boolean dayFound = false;
         for (DaySchedule daySchedule : planner) {
             if (day.equals(daySchedule.getDay())) {
