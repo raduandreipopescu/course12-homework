@@ -1,5 +1,7 @@
 package exerciseDailyPlanner;
 
+import java.time.DayOfWeek;
+
 public enum Day {
     MONDAY("monday"),
     TUESDAY("tuesday"),
@@ -19,6 +21,8 @@ public enum Day {
         this.day = day;
     }
 
+//    DayOfWeek
+//    Asta este un enum similar celui facut de noi (din java.time.*)
 }
 
 
